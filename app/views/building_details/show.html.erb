@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Key:</strong>
+  <%= @building_detail.key %>
+</p>
+
+<p>
+  <strong>Value:</strong>
+  <%= @building_detail.value %>
+</p>
+
+<%= link_to 'Edit', edit_building_detail_path(@building_detail) %> |
+<%= link_to 'Back', building_details_path %>

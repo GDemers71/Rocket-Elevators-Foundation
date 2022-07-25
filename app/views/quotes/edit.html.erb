@@ -1,0 +1,11 @@
+<%= render "partials/header" %>
+
+<%# Editing Quote %>
+<h1>Editing Quote</h1>
+
+<%= render 'form', quote: @quote %>
+
+<%= link_to 'Show', @quote %> |
+<%= link_to 'Home', root_path, 'data-turbolinks': false %>
+
+<%= render "partials/footer" %>

@@ -1,0 +1,4 @@
+class DwhBase < ActiveRecord::Base
+  establish_connection configurations['dwh'][Rails.env]
+  self.abstract_class = true
+end

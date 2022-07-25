@@ -1,0 +1,60 @@
+<%# Quote Index %>
+<p id="notice"><%= notice %></p>
+
+<h1>Quotes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Building type</th>
+      <th>Number of apartments</th>
+      <th>Number of floors</th>
+      <th>Number of basement</th>
+      <th>Number of businesses</th>
+      <th>Number of parking space</th>
+      <th>Number of elevator cages</th>
+      <th>Number of seperate tenant companies</th>
+      <th>Maximum number of occupants per floor</th>
+      <th>Hours of activity</th>
+      <th>Quality of elevator service</th>
+      <th>Unit price of each elevator</th>
+      <th>Amount of elevator needed</th>
+      <th>Total price of the elevators</th>
+      <th>Installation fees</th>
+      <th>Final price</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @quotes.each do |quote| %>
+      <tr>
+        <td><%= quote.building_type %></td>
+        <td><%= quote.number_of_apartments %></td>
+        <td><%= quote.number_of_floors %></td>
+        <td><%= quote.number_of_basement %></td>
+        <td><%= quote.number_of_businesses %></td>
+        <td><%= quote.number_of_parking_space %></td>
+        <td><%= quote.number_of_elevator_cages %></td>
+        <td><%= quote.number_of_seperate_tenant_companies %></td>
+        <td><%= quote.maximum_number_of_occupants_per_floor %></td>
+        <td><%= quote.hours_of_activity %></td>
+        <td><%= quote.quality_of_elevator_service %></td>
+        <td><%= quote.unit_price_of_each_elevator %></td>
+        <td><%= quote.amount_of_elevator_needed %></td>
+        <td><%= quote.total_price_of_the_elevators %></td>
+        <td><%= quote.installation_fees %></td>
+        <td><%= quote.final_price %></td>
+        <td><%= quote.quote_email %></td>
+        <td><%= quote.compagny_name %></td>
+        <td><%= link_to 'Show', quote %></td>
+        <td><%= link_to 'Edit', edit_quote_path(quote) %></td>
+        <td><%= link_to 'Destroy', quote, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Quote', new_quote_path %>

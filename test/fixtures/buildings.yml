@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  number_and_street: MyString
+  building_administrator_full_name: MyString
+  building_administrator_email: MyString
+  building_administrator_phone: MyString
+  building_technical_contact_full_name: MyString
+  building_technical_contact_email: MyString
+  building_technical_contact_phone: MyString
+
+two:
+  number_and_street: MyString
+  building_administrator_full_name: MyString
+  building_administrator_email: MyString
+  building_administrator_phone: MyString
+  building_technical_contact_full_name: MyString
+  building_technical_contact_email: MyString
+  building_technical_contact_phone: MyString

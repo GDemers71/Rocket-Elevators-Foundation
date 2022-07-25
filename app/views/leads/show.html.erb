@@ -1,0 +1,54 @@
+<%= render "partials/header" %>
+
+<h1 id="notice"><%= notice %></h1>
+
+<p>
+  <strong>Full name:</strong>
+  <%= @lead.full_name %>
+</p>
+
+<p>
+  <strong>Company name:</strong>
+  <%= @lead.company_name %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @lead.email %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @lead.phone %>
+</p>
+
+<p>
+  <strong>Project name:</strong>
+  <%= @lead.project_name %>
+</p>
+
+<p>
+  <strong>Project description:</strong>
+  <%= @lead.project_description %>
+</p>
+
+<p>
+  <strong>Department:</strong>
+  <%= @lead.department %>
+</p>
+
+<p>
+  <strong>Message:</strong>
+  <%= @lead.message %>
+</p>
+
+<p>
+  <strong>File attachment:</strong>
+  <%= @lead.file_attachment %>
+</p>
+
+
+<%= link_to 'Edit', edit_lead_path(@lead) %> |
+<%= link_to 'Home', root_path, 'data-turbolinks': false %>
+
+<%= render "partials/footer" %>

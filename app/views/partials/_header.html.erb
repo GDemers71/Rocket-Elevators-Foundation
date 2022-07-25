@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>Rocket Elevators - Elevate Safety, Speed and Style</title>
+		<meta name="description" content="Since 1976, Rocket Elevators is elevating safety, speed and style. Check out our residential elevator products and services at www.mathieubernier.com" />
+		<meta name="Author" content="Mathieu Bernier [www.mathieubernier.com]" />
+
+		<!-- mobile settings -->
+		<meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0" />
+		<!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+
+		<!-- JAVASCRIPT FILES -->
+		<script>var plugins_path = '/assets/plugins/';</script>
+		
+	</head>
+
+	<!--
+		AVAILABLE BODY CLASSES:
+		
+		smoothscroll 			= create a browser smooth scroll
+		enable-animation		= enable WOW animations
+
+		bg-grey					= grey background
+		grain-grey				= grey grain background
+		grain-blue				= blue grain background
+		grain-green				= green grain background
+		grain-blue				= blue grain background
+		grain-orange			= orange grain background
+		grain-yellow			= yellow grain background
+		
+		boxed 					= boxed layout
+		pattern1 ... patern11	= pattern background
+		menu-vertical-hide		= hidden, open on click
+		
+		BACKGROUND IMAGE [together with .boxed class]
+		data-background="assets/images/_smarty/boxed_background/1.jpg"
+	-->
+	<%# <body class="smoothscroll enable-animation"> %>
+
+
+		<!-- wrapper -->
+		<div id="wrapper">
+
+			<!-- 
+				AVAILABLE HEADER CLASSES
+
+				Default nav height: 96px
+				.header-md 		= 70px nav height
+				.header-sm 		= 60px nav height
+
+				.b-0 		= remove bottom border (only with transparent use)
+				.transparent	= transparent header
+				.translucent	= translucent header
+				.sticky			= sticky header
+				.static			= static header
+				.dark			= dark header
+				.bottom			= header on bottom
+				
+				shadow-before-1 = shadow 1 header top
+				shadow-after-1 	= shadow 1 header bottom
+				shadow-before-2 = shadow 2 header top
+				shadow-after-2 	= shadow 2 header bottom
+				shadow-before-3 = shadow 3 header top
+				shadow-after-3 	= shadow 3 header bottom
+
+				.clearfix		= required for mobile menu, do not remove!
+
+				Example Usage:  class="clearfix sticky header-sm transparent b-0"
+			-->
+			<div id="header" class="navbar-toggleable-md sticky header-md clearfix">
+
+				<!-- TOP NAV -->
+				<header id="topNav">
+					<div class="container">
+
+						<!-- Mobile Menu Button -->
+						<button class="btn btn-mobile" data-toggle="collapse" data-target=".nav-main-collapse">
+							<i class="fa fa-bars"></i>
+						</button>
+
+						<!-- Logo -->
+						<%= link_to image_tag("R2", alt: "Logo"),  "#{root_path}#toTop", :class => "logo float-left scrollTo", 'data-turbolinks': false %>
+
+						<!-- 
+							Top Nav 
+							
+							AVAILABLE CLASSES:
+							submenu-dark = dark sub menu
+						-->
+						<div class="navbar-collapse collapse float-right nav-main-collapse submenu-dark">
+							<nav class="nav-main">
+
+								<!-- 
+									.nav-onepage
+									Required for onepage navigation links
+									
+									Add .external for an external link!
+								-->
+								<ul id="topMain" class="nav nav-pills nav-main nav-onepage">
+									<li class="active"><!-- HOME -->
+										<%= link_to "HOME", root_path, 'data-turbolinks': false %>
+									</li>
+									<li><!-- SERVICES -->
+										<%= link_to "SERVICES", "#{root_path}#services", 'data-turbolinks': false %>
+									</li>
+									<li><!-- PORTFOLIO -->
+										<%= link_to "PORTFOLIO", "#{root_path}#portfolio", 'data-turbolinks': false %>
+									</li>
+									<li><!-- NEWS -->
+										<%= link_to "NEWS", "#{root_path}#news", 'data-turbolinks': false %>
+									</li>
+									<li><!-- CLIENTS -->
+										<%= link_to "CLIENTS", "#{root_path}#clients", 'data-turbolinks': false %>
+									</li>
+									<li><!-- CONTACT -->
+										<%= link_to "CONTACT", "#{root_path}#contact", 'data-turbolinks': false %>
+									</li>
+									<li><!-- LOGIN -->
+										<%= link_to "LOGIN", rails_admin_path, 'data-turbolinks': false %>
+									</li>
+									<li><!-- MAPSTEST -->
+										<%= link_to "MAPS", maps_path, 'data-turbolinks': false %>
+									</li>
+									
+								</ul>
+
+							</nav>
+						</div>
+
+					</div>
+				</header>
+				<!-- /Top Nav -->
+
+			</div>

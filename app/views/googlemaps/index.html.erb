@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>Google maps for Rocket Elevators employees Map</title>
+    	<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    	<%# <link rel="stylesheet" type="text/css" href="./style.css" /> %>
+    	<%# <script type="module" src="./maps.js"></script> %>
+	</head>
+	<body>
+		<h3>My Google Maps Demo</h3>
+		<div id="map"></div>
+
+		<script>
+			let map;
+			var marker;
+
+			function initMap() {
+				console.log("inside initMap")
+				const codeboxx = { lat: 42, lng: -100 };
+				map = new google.maps.Map(document.getElementById("map"), {
+					center: codeboxx,
+					zoom: 5
+				});
+				
+			var infowindow = new google.maps.InfoWindow();
+			 	
+				<% @test.each do |b| %>
+					marker = new google.maps.Marker({
+						position: { 
+							lat: <%= b[:lat] %>, 
+							lng: <%= b[:lng] %> 
+						},
+						map: map
+					});
+
+					google.maps.event.addListener(marker, 'click', (function(marker) {
+						return function() {
+							infowindow.setContent("Address: <%= b[:address] %>, <br>Client name: <%= b[:customername] %>, <br>Number of batteries: <%= b[:numberofbattery] %>, <br>Technical contact name: <%= b[:techcontactname] %>, <br>Number of columns: <%= b[:numberofcolumns] %>, <br>Number of elevators: <%= b[:numberofelevators] %>, <br>Number of floors: <%= b[:numberoffloors] %>");
+							
+							
+							
+							
+							infowindow.open(map, marker);
+						}
+					})(marker));
+
+					
+				<% end %>
+			}
+		</script>
+
+		
+		<script async defer
+			src="https://maps.googleapis.com/maps/api/js?key=<%= ENV['GOOGLE_KEY'] %>&callback=initMap">
+		</script> 
+	</body>
+</html>
+
+	

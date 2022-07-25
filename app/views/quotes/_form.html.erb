@@ -1,0 +1,121 @@
+<%# Quote Form %>
+<%= form_with(model: quote, local: true) do |form| %>
+  <% if quote.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(quote.errors.count, "error") %> prohibited this quote from being saved:</h2>
+
+      <ul>
+      <% quote.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+     <%= form.label :building_type %><br />
+				<%= form.label :building_type, "residential", :value => "residential", class: "buildingType" %>
+				<%= form.radio_button :building_type, "residential", class: "buildingType"%>
+				<%= form.label :building_type, "commercial", :value => "commercial", class: "buildingType" %>
+				<%= form.radio_button :building_type, "commercial", class: "buildingType"%>
+				<%= form.label :building_type, "corporate", :value => "corporate", class: "buildingType" %>
+				<%= form.radio_button :building_type, "corporate", class: "buildingType"%>
+				<%= form.label :building_type, "hybrid", :value => "hybrid", class: "buildingType" %>
+				<%= form.radio_button :building_type, "hybrid", class: "buildingType"%>
+  </div>
+  
+
+  <div class="field">    
+    <%= form.label :number_of_apartments, class: ["residential", "formField"] %>
+    <%= form.number_field :number_of_apartments, class: ["residential", "formField"] %>
+  </div>
+
+  <div class="field">
+    <%= form.label :number_of_floors, class: ["residential", "commercial", "corporate", "hybrid", "formField"] %>
+    <%= form.number_field :number_of_floors, class: ["residential",  "commercial",  "corporate",  "hybrid", "formField"] %>
+  </div>
+
+  <div class="field">
+    <%= form.label :number_of_basement, class: ["residential", "commercial", "corporate", "hybrid", "formField"] %>
+    <%= form.number_field :number_of_basement, class: ["residential", "commercial", "corporate", "hybrid", "formField"] %>
+  </div>
+
+  <div class="field">
+    <%= form.label :number_of_businesses, class: [ "commercial", "hybrid", "formField"] %>
+    <%= form.number_field :number_of_businesses, class: [ "commercial", "hybrid", "formField"] %>
+  </div>
+
+  <div class="field">
+    <%= form.label :number_of_parking_space, class: ["commercial", "corporate", "hybrid", "formField"] %>
+    <%= form.number_field :number_of_parking_space, class: ["commercial", "corporate", "hybrid", "formField"] %>
+  </div>
+
+  <div class="field">
+    <%= form.label :number_of_elevator_cages, class: ["commercial", "formField"] %>
+    <%= form.number_field :number_of_elevator_cages, class: ["commercial", "formField"] %>
+  </div>
+
+  <div class="field">
+    <%= form.label :number_of_seperate_tenant_companies, class: ["corporate", "formField"] %>
+    <%= form.number_field :number_of_seperate_tenant_companies, class: ["corporate", "formField"] %>
+  </div>
+
+  <div class="field">
+    <%= form.label :maximum_number_of_occupants_per_floor, class: ["corporate", "hybrid", "formField"] %>
+    <%= form.number_field :maximum_number_of_occupants_per_floor, class: ["corporate", "hybrid", "formField"] %>
+  </div>
+
+  <div class="field">
+    <%= form.label :hours_of_activity, class: ["hybrid", "formField"] %>
+    <%= form.number_field :hours_of_activity, class: ["hybrid", "formField"] %>
+  </div>
+
+  <div class="field">
+     <%= form.label :quality_of_elevator_service %><br />
+				<%= form.label :quality_of_elevator_service, "standard" %>
+				<%= form.radio_button :quality_of_elevator_service, 7565, class: "quality_of_service" %>
+				<%= form.label :quality_of_elevator_service, "premium"%>
+				<%= form.radio_button :quality_of_elevator_service, 12345, class: "quality_of_service" %>
+				<%= form.label :quality_of_elevator_service, "excelium" %>
+				<%= form.radio_button :quality_of_elevator_service, 15400, class: "quality_of_service" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :unit_price_of_each_elevator %>
+    <%= form.number_field :unit_price_of_each_elevator, class: "formFieldReadOnly", readonly: true %>
+  </div>
+
+  <div class="field">
+    <%= form.label :amount_of_elevator_needed %>
+    <%= form.text_field :amount_of_elevator_needed, class: "formFieldReadOnly", readonly: true %>
+  </div>
+
+  <div class="field">
+    <%= form.label :total_price_of_the_elevators %>
+    <%= form.text_field :total_price_of_the_elevators, class: "formFieldReadOnly", readonly: true  %>
+  </div>
+
+  <div class="field">
+    <%= form.label :installation_fees %>
+    <%= form.text_field :installation_fees, class: "formFieldReadOnly", readonly: true %>
+  </div>
+
+  <div class="field">
+    <%= form.label :final_price %>
+    <%= form.text_field :final_price, class: "formFieldReadOnly", readonly: true %>
+  </div>
+
+  <div class="field">
+    <%= form.label :quote_email %>
+    <%= form.text_field :quote_email %>
+  </div>
+
+    <div class="field">
+    <%= form.label :compagny_name %>
+    <%= form.text_field :compagny_name %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

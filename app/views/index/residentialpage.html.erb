@@ -1,0 +1,59 @@
+<%= render "partials/header" %>
+
+			<hr class="m-0" /><!-- 1px line separator -->
+
+
+			<!-- HEADER -->
+			<h3 class="btn btn-xlg btn-danger fs-20 fullwidth m-0 rad-0 p-40">
+				<span class="font-lato fs-30">
+					Looking for more infos <br>   
+					<strong>Residential division</strong>
+				</span>
+			</h3>
+			<!-- /HEADER -->
+
+
+			
+			<!-- Services -->
+			<section id="services">
+				<div class="container">
+
+					<div class="row">
+						<div class="col-sm-6">
+							<%= image_tag("AdobeStock_residential", class: "img-fluid", alt: "img", bgposition:"center") %>
+							<h3 class="mt-10">Residential division</h3>
+							<p>You have big projects ahead? Building or renovating, our residential division is there for you!</p>
+						</div>
+
+						<div class="col-sm-6">
+							<%= image_tag("AdobeStock_maintenance", class: "img-fluid", alt: "img", bgposition:"center") %>
+							<h3 class="mt-10">Maintenance services</h3>
+							<p>Our residential division offers professional maintenance services that will help keep your existing system in good shape.</p>
+						</div>
+					</div>
+
+				</div>
+			</section>
+			<!-- /Services -->
+
+			
+
+
+			<!-- Parallax En affaires ! -->
+			<section class="parallax parallax-1" style="background-image: url(<%= asset_path 'AdobeStock_3slides.jpeg' %>)">
+				<div class="overlay dark-5"><!-- dark overlay [1 to 9 opacity] --></div>
+
+				<div class="container">
+
+					<div class="text-center">
+						<h2 class="fs-40 fw-300">Elevating your projects since 1976</h2>
+							<%= link_to "GET A QUOTE", new_quote_path, :class => ["btn btn-blue btn-lg", "fa fa-angle-right"], 'data-turbolinks': false %>
+						&nbsp; OR &nbsp; 
+							<%= link_to "CONTACT US", "#{root_path}#contact", :class => ["btn btn-blue btn-lg", "fa fa-angle-right"], 'data-turbolinks': false %>
+					</div>
+
+				</div>
+			</section>
+			<!-- /Parallax -->
+
+<%= render "partials/footer" %>

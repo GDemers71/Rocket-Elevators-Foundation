@@ -1,0 +1,2 @@
+json.extract! quote, :id, :building_type, :number_of_apartments, :number_of_floors, :number_of_basement, :number_of_businesses, :number_of_parking_space, :number_of_elevator_cages, :number_of_seperate_tenant_companies, :maximum_number_of_occupants_per_floor, :hours_of_activity, :quality_of_elevator_service, :unit_price_of_each_elevator, :amount_of_elevator_needed, :total_price_of_the_elevators, :installation_fees, :final_price, :created_at, :updated_at
+json.url quote_url(quote, format: :json)

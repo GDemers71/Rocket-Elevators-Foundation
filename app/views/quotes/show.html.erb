@@ -1,0 +1,98 @@
+<%= render "partials/header" %>
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Building type:</strong>
+  <%= @quote.building_type %>
+</p>
+
+<p>
+  <strong>Number of apartments:</strong>
+  <%= @quote.number_of_apartments %>
+</p>
+
+<p>
+  <strong>Number of floors:</strong>
+  <%= @quote.number_of_floors %>
+</p>
+
+<p>
+  <strong>Number of basement:</strong>
+  <%= @quote.number_of_basement %>
+</p>
+
+<p>
+  <strong>Number of businesses:</strong>
+  <%= @quote.number_of_businesses %>
+</p>
+
+<p>
+  <strong>Number of parking space:</strong>
+  <%= @quote.number_of_parking_space %>
+</p>
+
+<p>
+  <strong>Number of elevator cages:</strong>
+  <%= @quote.number_of_elevator_cages %>
+</p>
+
+<p>
+  <strong>Number of seperate tenant companies:</strong>
+  <%= @quote.number_of_seperate_tenant_companies %>
+</p>
+
+<p>
+  <strong>Maximum number of occupants per floor:</strong>
+  <%= @quote.maximum_number_of_occupants_per_floor %>
+</p>
+
+<p>
+  <strong>Hours of activity:</strong>
+  <%= @quote.hours_of_activity %>
+</p>
+
+<p>
+  <strong>Quality of elevator service:</strong>
+  <%= @quote.quality_of_elevator_service %>
+</p>
+
+<p>
+  <strong>Unit price of each elevator:</strong>
+  <%= @quote.unit_price_of_each_elevator %>
+</p>
+
+<p>
+  <strong>Amount of elevator needed:</strong>
+  <%= @quote.amount_of_elevator_needed %>
+</p>
+
+<p>
+  <strong>Total price of the elevators:</strong>
+  <%= @quote.total_price_of_the_elevators %>
+</p>
+
+<p>
+  <strong>Installation fees:</strong>
+  <%= @quote.installation_fees %>
+</p>
+
+<p>
+  <strong>Final price:</strong>
+  <%= @quote.final_price %>
+</p>
+
+<p>
+  <strong>Quote Email:</strong>
+  <%= @quote.quote_email %>
+</p>
+
+<p>
+  <strong>Quote Compagny:</strong>
+  <%= @quote.compagny_name %>
+</p>
+
+<%= link_to 'Edit', edit_quote_path(@quote) %> |
+<%= link_to 'Home', root_path, 'data-turbolinks': false %>
+
+<%= render "partials/footer" %>
