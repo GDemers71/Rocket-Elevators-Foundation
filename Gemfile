@@ -143,5 +143,8 @@ end
 # for graphQL  
   gem 'graphql', '1.11.6'
 
- 
+# default_value_for
+gem "default_value_for", "~> 3.0"
+
+# graphiQL interface in local browser
 gem 'graphiql-rails', '1.7.0', group: :development

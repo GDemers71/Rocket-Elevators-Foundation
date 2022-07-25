@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_07_13_171013) do
+ActiveRecord::Schema.define(version: 2022_07_25_171245) do
 
   create_table "addresses", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3", force: :cascade do |t|
     t.string "type_of_address"
@@ -128,6 +128,23 @@ ActiveRecord::Schema.define(version: 2022_07_13_171013) do
   end
 
   create_table "googlemapsforemps", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "interventions", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3", force: :cascade do |t|
+    t.string "author"
+    t.string "customer_id"
+    t.string "building_id"
+    t.string "battery_id"
+    t.string "column_id"
+    t.string "elevator_id"
+    t.string "employee_id"
+    t.datetime "start"
+    t.datetime "end"
+    t.string "result"
+    t.text "report"
+    t.string "status"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

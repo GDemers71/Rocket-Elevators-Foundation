@@ -1,0 +1,64 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Author:</strong>
+  <%= @intervention.author %>
+</p>
+
+<p>
+  <strong>Customer:</strong>
+  <%= @intervention.customer_id %>
+</p>
+
+<p>
+  <strong>Building:</strong>
+  <%= @intervention.building_id %>
+</p>
+
+<p>
+  <strong>Battery:</strong>
+  <%= @intervention.battery_id %>
+</p>
+
+<p>
+  <strong>Column:</strong>
+  <%= @intervention.column_id %>
+</p>
+
+<p>
+  <strong>Elevator:</strong>
+  <%= @intervention.elevator_id %>
+</p>
+
+<p>
+  <strong>Employee:</strong>
+  <%= @intervention.employee_id %>
+</p>
+
+<p>
+  <strong>Start:</strong>
+  <%= @intervention.start %>
+</p>
+
+<p>
+  <strong>End:</strong>
+  <%= @intervention.end %>
+</p>
+
+<p>
+  <strong>Result:</strong>
+  <%= @intervention.result %>
+</p>
+
+<p>
+  <strong>Report:</strong>
+  <%= @intervention.report %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @intervention.status %>
+</p>
+
+<%= link_to 'Edit', edit_intervention_path(@intervention) %> |
+<%= link_to 'Back', interventions_path %>
