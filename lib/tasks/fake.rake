@@ -145,6 +145,18 @@ namespace :fake do
         )
       end
     end
+    
+    # task intervention: :environment do
+      20.times do
+        intervention = Intervention.create(
+        author: Faker::Name.name,
+        customer_id: Faker::Number.number(digits: 2),
+        building_id: Faker::Number.number(digits: 2),
+        battery_id: Faker::Number.number(digits: 2),
+      )
+      end
+        
+
     #data = JSON.load file
     #pp hash["addresses"]
     puts "-----mySQL-----"

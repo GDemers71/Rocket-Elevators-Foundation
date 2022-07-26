@@ -31,4 +31,5 @@ Rails.application.routes.draw do
   get 'index', to: 'index#index'
   post 'lead', to: 'leads#create', as: "leadcreate"
   get 'googlemap', to: 'googlemaps#index', as: "maps"
+  get 'interventions', to: 'interventions#new'
 end
