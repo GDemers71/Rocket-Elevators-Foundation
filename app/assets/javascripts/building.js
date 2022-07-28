@@ -1,4 +1,5 @@
 $(function() {
+    
 
     if ($("select#customer_id").val() == "") {
      $("select#building_id option").remove();
