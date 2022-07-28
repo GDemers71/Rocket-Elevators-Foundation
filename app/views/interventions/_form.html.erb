@@ -16,23 +16,26 @@
     <%= form.text_field :author %>
   </div>
 
-<div class="row no-gutters wow slideInUp" data-wow-duration="1s">
-  <div class="col-md-12 home-form">
-    <%= form.label :customer_id %>
-    <%= select_tag "customer_id", options_from_collection_for_select(Customer.all, "id", "id"), prompt: "none", class: "custom-select mb-0 mr-sm-0 mb-sm-0" %>
-    <%= form.label :building_id %>
-    <%= select_tag "building_id", options_from_collection_for_select(Building.all, "id", "id"), prompt: "none", class: "custom-select mb-0 mr-sm-0 mb-sm-0" %>
-    <%= form.label :battery_id %>
-    <%= select_tag "battery_id", options_from_collection_for_select(Battery.all, "id", "id"), prompt: "none", class: "custom-select mb-0 mr-sm-0 mb-sm-0" %>
-    <%= form.label :column_id %>
-    <%= select_tag "column_id", options_from_collection_for_select(Column.all, "id", "id"), prompt: "none", class: "custom-select mb-0 mr-sm-0 mb-sm-0" %>
-    <%= form.label :elevator_id %>
-    <%= select_tag "elevator_id", options_from_collection_for_select(Elevator.all, "id", "id"), prompt: "none", class: "custom-select mb-0 mr-sm-0 mb-sm-0" %>
+  <div class="row no-gutters wow slideInUp" data-wow-duration="1s">
+    <div class="col-md-12 home-form">
+      <%= form.label :customer_id %>
+      <%= select_tag "customer_id", options_from_collection_for_select(Customer.all, "id", "id"), prompt: "none", class: "custom-select mb-0 mr-sm-0 mb-sm-0" %>
+      <%= form.label :building_id %>
+      <%= select_tag "building_id", options_from_collection_for_select(Building.all, "id", "id"), prompt: "none", class: "custom-select mb-0 mr-sm-0 mb-sm-0" %>
+      <%= form.label :battery_id %>
+      <%= select_tag "battery_id", options_from_collection_for_select(Battery.all, "id", "id"), prompt: "none", class: "custom-select mb-0 mr-sm-0 mb-sm-0" %>
+      <%= form.label :column_id %>
+      <%= select_tag "column_id", options_from_collection_for_select(Column.all, "id", "id"), prompt: "none", class: "custom-select mb-0 mr-sm-0 mb-sm-0" %>
+      <%= form.label :elevator_id %>
+      <%= select_tag "elevator_id", options_from_collection_for_select(Elevator.all, "id", "id"), prompt: "none", class: "custom-select mb-0 mr-sm-0 mb-sm-0" %>
+       <%= form.label :employee_id %>
+      <%= select_tag "employee_id", options_from_collection_for_select(Employee.all, "id", "id"), prompt: "none", class: "custom-select mb-0 mr-sm-0 mb-sm-0" %>
+      <div class="actions">
+        <%= form.submit %>
+      </div>
+    </div>
   </div>
-</div>
- <div class="actions">
-    <%= form.submit %>
-  </div>
+ 
 <% end %>
 
     
