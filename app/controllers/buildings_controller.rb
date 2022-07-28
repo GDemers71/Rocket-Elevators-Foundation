@@ -1,6 +1,20 @@
 class BuildingsController < ApplicationController
   before_action :set_building, only: %i[ show edit update destroy ]
 
+  def get_buildings_by_customer
+    @buildings = Building.where("customer_id = ?", params[:customer_id])
+    respond_to do |format|
+      format.json { render :json => @buildings}
+    end
+  end
+  def building_search
+    if params[:customer_id].present? && params[:customer_id].strip != ""
+      @buildings = Building.where("customer_id = ?", params[:customer_id])
+    else
+      @buildings = Building.all
+    end
+  end
+
   # GET /buildings or /buildings.json
   def index
     @buildings = Building.all

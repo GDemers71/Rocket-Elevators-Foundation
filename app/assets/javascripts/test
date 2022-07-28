@@ -1,0 +1,36 @@
+    if ($("select#column").val() == "") {
+     $("select#elevator option").remove();
+     var row = "<option value=\"" + "" + "\">" + "elevator" + "</option>";
+     $(row).appendTo("select#elevator");
+    }
+    $("select#column").change(function() {
+     var id_value_string = $(this).val();
+     if (id_value_string == "") {
+      $("select#elevator option").remove();
+      var row = "<option value=\"" + "" + "\">" + "elevator" + "</option>";
+      $(row).appendTo("select#elevator");
+     } else {
+      // Send the request and update elevator dropdown
+      $.ajax({
+       dataType: "json",
+       cache: false,
+       url: '/get_batteries_by_column/' + id_value_string,
+       timeout: 5000,
+       error: function(XMLHttpRequest, errorTextStatus, error) {
+        alert("Failed to submit : " + errorTextStatus + " ;" + error);
+       },
+       success: function(data) {
+        // Clear all options from elevator select
+        $("select#elevator option").remove();
+        //put in a empty default line
+        var row = "<option value=\"" + "" + "\">" + "elevator" + "</option>";
+        $(row).appendTo("select#elevator");
+        // Fill elevator select
+        $.each(data, function(i, j) {
+         row = "<option value=\"" + j.id + "\">" + j.elevator_administrator_full_name + "</option>";
+         $(row).appendTo("select#elevator");
+        });
+       }
+      });
+     }
+    });

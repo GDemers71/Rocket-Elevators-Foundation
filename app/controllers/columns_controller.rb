@@ -1,6 +1,21 @@
 class ColumnsController < ApplicationController
   before_action :set_column, only: %i[ show edit update destroy ]
 
+  def get_columns_by_battery
+    @columns = Column.where("battery_id = ?", params[:battery_id])
+    respond_to do |format|
+      format.json { render :json => @columns }
+    end
+  end 
+  def column_search
+    if params[:battery_id].present? && params[:battery_id].strip != ""
+      @columns = Column.where("battery_id = ?", params[:battery_id])
+    else
+      @columns = Column.all
+    end
+  end
+
+
   # GET /columns or /columns.json
   def index
     @columns = Column.all
@@ -26,7 +41,7 @@ class ColumnsController < ApplicationController
     respond_to do |format|
       if @column.save
         format.html { redirect_to column_url(@column), notice: "Column was successfully created." }
-        format.json { render :show, status: :created, location: @column }
+        format.json { render :show, status: :created, battery: @column }
       else
         format.html { render :new, status: :unprocessable_entity }
         format.json { render json: @column.errors, status: :unprocessable_entity }
@@ -39,7 +54,7 @@ class ColumnsController < ApplicationController
     respond_to do |format|
       if @column.update(column_params)
         format.html { redirect_to column_url(@column), notice: "Column was successfully updated." }
-        format.json { render :show, status: :ok, location: @column }
+        format.json { render :show, status: :ok, battery: @column }
       else
         format.html { render :edit, status: :unprocessable_entity }
         format.json { render json: @column.errors, status: :unprocessable_entity }

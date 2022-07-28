@@ -1,6 +1,20 @@
 class BatteriesController < ApplicationController
   before_action :set_battery, only: %i[ show edit update destroy ]
 
+  def get_batteries_by_building
+    @batteries = Battery.where("building_id = ?", params[:building_id])
+    respond_to do |format|
+      format.json { render :json => @batteries}
+    end
+  end
+  def battery_search
+    if params[:building_id].present? && params[:building_id].strip != ""
+      @batteries = Batteries.where("building_id = ?", params[:building_id])
+    else
+      @batteries = Battery.all
+    end
+  end
+
   # GET /batteries or /batteries.json
   def index
     @batteries = Battery.all

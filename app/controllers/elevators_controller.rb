@@ -5,6 +5,21 @@ class ElevatorsController < ApplicationController
 
   before_action :set_elevator, only: %i[ show edit update destroy ]
 
+  def get_elevators_by_column
+    @elevators = Elevator.where("column_id = ?", params[:column_id])
+    respond_to do |format|
+      format.json { render :json => @elevators }
+    end
+  end 
+  def elevator_search
+    if params[:column_id].present? && params[:column_id].strip != ""
+      @elevators = Elevator.where("column_id = ?", params[:column_id])
+    else
+      @elevators = Elevator.all
+    end
+  end
+ 
+
   # GET /elevators or /elevators.json
   def index
     @elevators = Elevator.all

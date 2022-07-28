@@ -148,3 +148,6 @@ gem "default_value_for", "~> 3.0"
 
 # graphiQL interface in local browser
 gem 'graphiql-rails', '1.7.0', group: :development
+
+# form builder helper
+gem 'simple_form'
