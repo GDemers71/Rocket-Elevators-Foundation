@@ -151,3 +151,6 @@ gem 'graphiql-rails', '1.7.0', group: :development
 
 # form builder helper
 gem 'simple_form'
+
+# freshdesk api v2 
+gem 'freshdesk-api-v2-rails'
