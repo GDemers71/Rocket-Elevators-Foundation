@@ -8,30 +8,30 @@
 
 require 'faker'
 
-User.create!(id: 1, email: 'mathieu.houde@codeboxx.biz', password: 'password123', password_confirmation: 'password123')
-User.create!(id: 2, email: 'patrick.thibault@codeboxx.biz', password: 'password123', password_confirmation: 'password123')
-User.create!(id: 3, email: 'francis.patry-jessop@codeboxx.biz', password: 'password123', password_confirmation: 'password123')
-User.create!(id: 4, email: 'david.amyot@codeboxx.biz', password: 'password123', password_confirmation: 'password123')
-User.create!(id: 5, email: 'marie-eve.goupil@codeboxx.biz', password: 'password123', password_confirmation: 'password123')
-User.create!(id: 6, email: 'francois.boivin@codeboxx.biz', password: 'password123', password_confirmation: 'password123')
-User.create!(id: 7, email: 'timothy.wever@codeboxx.biz', password: 'password123', password_confirmation: 'password123')
-User.create!(id: 8, email: 'kiril.kleinerman@codeboxx.biz', password: 'password123', password_confirmation: 'password123')
-User.create!(id: 9, email: 'felicia.hartono@codeboxx.biz', password: 'password123', password_confirmation: 'password123')
-User.create!(id: 10, email: 'eileen.ai@codeboxx.biz', password: 'password123', password_confirmation: 'password123')
+User.create!(email: 'mathieu.houde@codeboxx.biz', password: 'password123', password_confirmation: 'password123')
+User.create!(email: 'patrick.thibault@codeboxx.biz', password: 'password123', password_confirmation: 'password123')
+User.create!(email: 'francis.patry-jessop@codeboxx.biz', password: 'password123', password_confirmation: 'password123')
+User.create!(email: 'david.amyot@codeboxx.biz', password: 'password123', password_confirmation: 'password123')
+User.create!(email: 'marie-eve.goupil@codeboxx.biz', password: 'password123', password_confirmation: 'password123')
+User.create!(email: 'francois.boivin@codeboxx.biz', password: 'password123', password_confirmation: 'password123')
+User.create!(email: 'timothy.wever@codeboxx.biz', password: 'password123', password_confirmation: 'password123')
+User.create!(email: 'kiril.kleinerman@codeboxx.biz', password: 'password123', password_confirmation: 'password123')
+User.create!(email: 'felicia.hartono@codeboxx.biz', password: 'password123', password_confirmation: 'password123')
+User.create!(email: 'eileen.ai@codeboxx.biz', password: 'password123', password_confirmation: 'password123')
 
 
 
 
-# Employee.create!(id: 1, first_name: 'Mathieu', last_name: 'Houde', title: 'Gopher', email: 'mathieu.houde@codeboxx.biz', user_id: 1)
-# Employee.create!(id: 2, first_name: "Patrick", last_name: "Thibault", title: "Maximalist", email: 'patrick.thibault@codeboxx.biz', user_id: 2)
-# Employee.create!(id: 3, first_name: "Francis", last_name: "Patry-Jessop", title: "Captain", email: 'francis.patry-jessop@codeboxx.biz', user_id: 3)
-# Employee.create!(id: 4, first_name: "David", last_name: "Amyot", title: "The Man", email: 'david.amyot@codeboxx.biz', user_id: 4)
-# Employee.create!(id: 5, first_name: "Marie-Ève", last_name: "Goupil", title: "AI Master", email: 'marie-eve.goupil@codeboxx.biz', user_id: 5)
-# Employee.create!(id: 6, first_name: "François", last_name: "Boivin", title: "The Tank", email: 'francois.boivin@codeboxx.biz', user_id: 6)
-# Employee.create!(id: 7, first_name: "Timothy", last_name: "Wever", title: "Beard whisperer", email: 'timothy.wever@codeboxx.biz', user_id: 7)
-# Employee.create!(id: 8, first_name: "Kiril", last_name: "Kleinerman", title: "I <3 Winnipeg", email: 'kiril.kleinerman@codeboxx.biz', user_id: 8)
-# Employee.create!(id: 9, first_name: "Felicia", last_name: "Hartono", title: "Scrums are too early", email: 'felicia.hartono@codeboxx.biz', user_id: 9)
-# Employee.create!(id: 10, first_name: "Eileen", last_name: "Ai", title: "They really are.", email: 'eileen.ai@codeboxx.biz', user_id: 10)
+# Employee.create!(id: 1, first_name: 'Mathieu', last_name: 'Houde', title: 'Gopher', email: 'mathieu.houde@codeboxx.biz', user: User.find(1))
+# Employee.create!(id: 2, first_name: "Patrick", last_name: "Thibault", title: "Maximalist", email: 'patrick.thibault@codeboxx.biz',user: User.find(2))
+# Employee.create!(id: 3, first_name: "Francis", last_name: "Patry-Jessop", title: "Captain", email: 'francis.patry-jessop@codeboxx.biz', user: User.find(3))
+# Employee.create!(id: 4, first_name: "David", last_name: "Amyot", title: "The Man", email: 'david.amyot@codeboxx.biz', user: User.find(4))
+# Employee.create!(id: 5, first_name: "Marie-Ève", last_name: "Goupil", title: "AI Master", email: 'marie-eve.goupil@codeboxx.biz', user: User.find(5))
+# Employee.create!(id: 6, first_name: "François", last_name: "Boivin", title: "The Tank", email: 'francois.boivin@codeboxx.biz', user: User.find(6))
+# Employee.create!(id: 7, first_name: "Timothy", last_name: "Wever", title: "Beard whisperer", email: 'timothy.wever@codeboxx.biz', user: User.find(7))
+# Employee.create!(id: 8, first_name: "Kiril", last_name: "Kleinerman", title: "I <3 Winnipeg", email: 'kiril.kleinerman@codeboxx.biz', user: User.find(8))
+# Employee.create!(id: 9, first_name: "Felicia", last_name: "Hartono", title: "Scrums are too early", email: 'felicia.hartono@codeboxx.biz', user: User.find(9))
+# Employee.create!(id: 10, first_name: "Eileen", last_name: "Ai", title: "They really are.", email: 'eileen.ai@codeboxx.biz', user: User.find(10))
 
 # Faker::Config.locale = 'en-US'
 
@@ -69,7 +69,7 @@ User.create!(id: 10, email: 'eileen.ai@codeboxx.biz', password: 'password123', p
 #         service_technical_authority_full_name: Faker::Name.name,
 #         service_technical_authority_phone: Faker::PhoneNumber.phone_number,
 #         service_technical_manager_email: Faker::Internet.email,
-#         user_id: usertest.id,
+#         user: usertest.id,
 #     )
 #     customer.save
 

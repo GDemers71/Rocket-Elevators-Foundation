@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_07_28_153636) do
+ActiveRecord::Schema.define(version: 2022_08_29_195625) do
 
   create_table "addresses", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3", force: :cascade do |t|
     t.string "type_of_address"
@@ -124,6 +124,7 @@ ActiveRecord::Schema.define(version: 2022_07_28_153636) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "user_id"
+    t.json "facial_keypoints"
     t.index ["user_id"], name: "index_employees_on_user_id"
   end
 
