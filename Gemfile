@@ -154,3 +154,5 @@ gem 'simple_form'
 
 # freshdesk api v2 
 gem 'freshdesk-api-v2-rails'
+
+gem 'newrelic_rpm'
